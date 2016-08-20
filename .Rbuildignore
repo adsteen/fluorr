@@ -1,0 +1,11 @@
+# Scripts used in development
+
+^.*\.Rproj$
+^\.Rproj\.user$
+^README\.Rmd$       # An Rmarkdown file used to generate README.md
+^cran-comments\.md$ # Comments for CRAN submission
+^NEWS\.md$          # A news file written in Markdown
+# test_script.R       # Does not work likely because it is not anchored
+# ^R\.test_script$ 
+^test_script\.R$
+^abby_data$
