@@ -9,3 +9,4 @@
 # ^R\.test_script$ 
 ^test_script\.R$
 ^abby_data$
+^R/test_script\.R$

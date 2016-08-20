@@ -12,19 +12,13 @@ read_EEM_dat <- function(fn, path="") {
   ex.vec <- as.vector(read.table(paste(path, fn, sep=""), 
                                  sep="\t", skip=0, nrows=1,
                                  stringsAsFactors=FALSE))
-  ex.vec <- ex.vec[-1]
+  ex.vec <- as.character(ex.vec[-1]) # The first element is 'wavelength'; need to have these as character so tehy can be legit column names
   
+  # Set column names to be wavelength values
+  colnames(EEM) <- c("em.nm", ex.vec)
   
-  # Set the first column (which contains emission wavelengths) as rownames
-  rownames(EEM) <- EEM[ , 1]
+  # Melt EEM data frame
+  EEM_tidy <- gather(EEM, "ex.nm", "RFU", 2:ncol(EEM)) # This works
   
-  # Remove the emission wavelengths from the data
-  EEM <- EEM[, -1]
-  
-  # Set excitation values (which were fed in) as column names
-  colnames(EEM) <- as.character(ex.vec)
-  EEM <- as.matrix(EEM)
-  names(dimnames(EEM)) <- c("em", "ex")
-
-  EEM
+  EEM_tidy
 }
