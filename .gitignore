@@ -2,3 +2,5 @@
 R/.DS_Store
 fluorr.Rproj
 .Rproj.user
+.RData
+.Rhistory
