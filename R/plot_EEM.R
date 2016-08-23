@@ -9,7 +9,7 @@ plot_EEM <- function(EEM, scale.max=NULL, plot.title="EEM plot",  contour=FALSE,
     geom_tile() + 
     coord_fixed()
   
-  if(!is.nul(scale.max)) {
+  if(!is.null(scale.max)) {
     #p <- p+
   }
   
