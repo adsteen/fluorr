@@ -6,7 +6,6 @@ read_EEM_dat <- function(fn, path="") {
   EEM <- read.table(paste(path, fn, sep=""), 
                              sep="\t", skip=2,
                              stringsAsFactors=FALSE)
-  #browser()
   
   # Read in the excitation wavelengths
   ex.vec <- as.vector(read.table(paste(path, fn, sep=""), 
@@ -19,6 +18,7 @@ read_EEM_dat <- function(fn, path="") {
   
   # Melt EEM data frame
   EEM_tidy <- gather(EEM, "ex.nm", "RFU", 2:ncol(EEM)) # This works
+  EEM_tidy$ex.nm <- as.numeric(EEM_tidy$ex.nm)
   
   EEM_tidy
 }
