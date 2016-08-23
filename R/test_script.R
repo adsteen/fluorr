@@ -16,6 +16,10 @@ ggplot(raman, aes(x=wavelength, y=MicroAmps)) +
 
 # fl blank
 fl_blank <- read_EEM_dat("abby_data/Blank (01)_Graph_S1_R1.dat")
+p_blank <- plot_EEM(fl_blank)
+print(p_blank)
 
-# WTF - read_EEM_dat gives me a wide format matrix?
-fl_
+# Not sure which sample this is
+unk_1 <- read_EEM_dat("abby_data/Sample (01)_Graph_S1_R1.dat")
+p_unk_1 <- plot_EEM(unk_1)
+print(p_unk_1)
