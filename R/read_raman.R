@@ -2,7 +2,7 @@
 ##' @description Reads Raman scattering data file
 ##' @param fn Filename
 ##' @param wavelength Name of the wavelength 
-##' @source 
+##' @export 
 
 read_raman <- function(fn, wavelength="nm", response="CPS", low.cutoff=370, ...) {
   #browser()
