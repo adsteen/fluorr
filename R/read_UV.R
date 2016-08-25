@@ -1,7 +1,10 @@
 ##' Reads UV csv files and resamples to 
 
-read_UV <- function(fn, wavelength="Wavelength..nm.", response="Absorbance", resample=TRUE, ...) {
-  UV <- read.csv(fn)
+read_UV <- function(fn, wavelength="Wavelength..nm.", response="Absorbance", resample=TRUE, skip=2, ...) {
+  # THIS IS A MARKER PUT HERE 10:41 THURSDAY 8-25
+  browser()
+  #UV <- read.csv(fn)
+  UV <- read_csv(fn, skip = 2)
   names(UV)[names(UV)==wavelength] <- "wavelength"
   names(UV)[names(UV)==response] <- "abs"
   
