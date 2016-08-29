@@ -1,4 +1,5 @@
-##' Reads UV csv files and resamples to 
+##' Reads UV csv files
+##' @export
 
 read_UV <- function(fn, wavelength="Wavelength..nm.", response="Absorbance", resample=TRUE, skip=2, ...) {
   # THIS IS A MARKER PUT HERE 10:41 THURSDAY 8-25

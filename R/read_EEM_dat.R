@@ -1,4 +1,5 @@
 ##' Reads EEM dat files from Engel lab f4
+##' @export
 
 read_EEM_dat <- function(fn, path="") {
   
